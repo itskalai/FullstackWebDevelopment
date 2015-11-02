@@ -1,0 +1,48 @@
+One thing this learner did particularly well in their HTML file was...
+Photo of learner Jose	
+Jose
+All requirements met
+Photo of learner Ramu K C	
+Ramu K C
+Good attempt on using javascript for handling the requirements
+Photo of learner OJEBA EMMANUEL	
+OJEBA EMMANUEL
+Alert
+Photo of learner KadriL	
+KadriL
+The game worked perfectly
+Photo of learner Mark	
+Mark
+match all the requirements.
+One way this page could be improved would be...
+Photo of learner Jose	
+Jose
+None.
+Photo of learner Ramu K C	
+Ramu K C
+Handle the cancel button in the prompt. Otherwise the user is forced to play the game always
+Photo of learner OJEBA EMMANUEL	
+OJEBA EMMANUEL
+more colors
+Photo of learner KadriL	
+KadriL
+Would have been better if there were spaces between the commas in the array
+Photo of learner Mark	
+Mark
+Should have considered capital letter(RED=red)
+If there is any additional feedback you would like to give?
+Photo of learner Jose	
+Jose
+I recommend using join() for outputting the colors as a string since join() allows custom seperator; for example, join(", ") will allow a space after each comma in the list.
+Photo of learner Ramu K C	
+Ramu K C
+Please check the usage of Array.indexOf for checking if a color is in a given array instead of looping
+Photo of learner OJEBA EMMANUEL	
+OJEBA EMMANUEL
+nice job
+Photo of learner KadriL	
+KadriL
+Excellent!
+Photo of learner Mark	
+Mark
+nothing

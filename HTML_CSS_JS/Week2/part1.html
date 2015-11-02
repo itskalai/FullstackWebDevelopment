@@ -1,0 +1,41 @@
+<!--DOCTYPE HTML-->
+<html>
+<head>
+	<meta name="Description" content="Color guessing game iteration 1 for full stack development course">
+	<meta name="Author" content
+	<title>
+		Guess the color game - Part 1
+	</title>
+</head>
+<body onload = "doTheGuessingGame()">
+	
+<script type="text/javascript">
+	var colors=["blue","green","yellow","purple","cyan","gold","black","maroon","pink","mediumorchid","teal"];
+	var targetNum, target;
+	var finished = false;
+	var guess;
+
+function doTheGuessingGame()	{
+	colors=colors.sort();
+	//console.log(colors);
+	targetNum = Math.floor(Math.random() * colors.length) + 1;
+	//console.log(targetNum);
+	target = colors[targetNum - 1];
+    //console.log(colors.length, target);	
+    alert("Target is " + target)
+
+    while(!finished)
+    {
+    	guess = prompt("I am thinking of one of these colors:\n\n" + colors + "\n\nWhat color am I thinking of?");
+    	if (guess == target)	{
+    		alert("congratulations! you have guessed the color!");
+    		return true;
+
+    	}
+    }
+}
+
+</script>
+
+</body>
+</html>

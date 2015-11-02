@@ -1,0 +1,97 @@
+<!--DOCTYPE HTML-->
+<html>
+<head>
+	<meta name="Description" content="Color guessing game for full stack development course">
+	<meta name="Author" content="Kalai Vani">
+	<title>
+		Guess the color game
+	</title>
+</head>
+<body onload = "doTheGuessingGame()">
+	
+<script type="text/javascript">
+	var colors=["blue","green","yellow","purple","cyan","gold","black","maroon","pink","mediumorchid","teal"];
+	var noOfGuesses = 0;
+	var targetNum, target;
+	var finished = false;
+	var guess;
+
+//All the debug code is commented
+
+function doTheGuessingGame()	{
+	colors=colors.sort();
+	//console.log(colors);
+	targetNum = Math.floor(Math.random() * colors.length) + 1;
+	//console.log(targetNum);
+	target = colors[targetNum-1];								//As array index is from 0 set the target color to arrayindex minus 1
+    //console.log(colors.length, target);	
+
+    while(!finished)
+    {
+		colors=colors.join(" , ");
+    	guess = prompt("I am thinking of one of these colors:\n\n" + colors + "\n\nWhat color am I thinking of?");
+    	noOfGuesses += 1;
+    	finished = check_guess();
+
+    	/* if(noOfGuesses >= colors.length)
+    		break;
+    	*/
+    }
+}
+
+//Validate the guess and check it against the randomly generated target color
+
+function check_guess() {
+	if(guess == NULL)
+		return;
+	if(!isNaN(guess))	{
+		alert("Please enter a color name");
+	}
+
+	i = colors.length;
+	//isValidColor = false;
+
+if(colors.indexOf(guess) === -1)
+{
+	alert("Sorry, I don't recogonize your color. \n Please try again." );
+	return false;
+}
+/* use indexOf instead!
+	while(i--)	{
+		if (colors[i] == guess)	{
+			isValidColor = true;
+			break;
+		}		
+
+	}
+
+	if(!isValidColor)	{
+		alert("Sorry, I don't recogonize your color. \n Please try again." );
+		return false;
+	} 
+*/
+	
+	if (guess > target)	{
+		alert("Sorry. Your guess is not correct! \n Hint: Your color is alphabetically higher than mine. \n Please try again");
+		return false;
+	}
+
+	if (guess < target)	{
+		alert("Sorry. Your guess is not correct! \n Hint: Your color is alphabetically lower than mine. \n Please try again");
+		return false;
+	}
+
+	//if (guess == target)	{   ------ No need to test anymore they are equal!!
+		
+		var body = document.getElementsByTagName("body")[0];
+		body.style.background = target;
+		alert("congratulations! you have guessed the color! It took you " + noOfGuesses + " guesses to finish the game!\n You can see the color in the background");
+		return true;
+
+	//}
+}
+
+</script>
+
+</body>
+</html>
